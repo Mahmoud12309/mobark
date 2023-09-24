@@ -7,8 +7,16 @@
     list-style: none;
 }
 
-
-
+:root {
+    --primary-color: #8200E9;
+    --primary-color-10: #0E001A;
+    --primary-color-15: #27212C;
+    --primary-color-20: #332F37;
+    --primary-color-25: #413749;
+    --primary-color-60: #A151E1;
+    --primary-color-70: #B4ADB8;
+    --primary-color-80: #CDC7D1;
+}
 
 header {
     width: 100%;
@@ -29,6 +37,23 @@ header .logo {
     font-family: 'Aclonica', sans-serif;
 }
 
+header nav {
+    display: flex;
+    align-items: center;
+    width: 67%;
+    padding: 4px 0;
+    justify-content: space-between;
+}
+
+header nav .close {
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: none;
+}
+
 header ul {
     display: flex;
     align-items: center;
@@ -37,31 +62,80 @@ header ul {
 header ul li a {
     padding: 10px;
     color: #fff;
-    transition:0.3s;
+    transition: 0.3s;
 }
-header ul li a:hover{
+
+header ul li a:hover {
     color: #ab40ff;
 }
 
-header .lang {
-    display: flex;
-    width: 100px;
-    align-items: center;
-    justify-content: space-around;
-    background: #ffffff24;
-    padding: 7px;
-    border-radius: 20px;
-    cursor: pointer;
+header ul li a select {
+    background: transparent;
+    border: 0;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 0;
 }
 
-header .lang i {
-    color: #ab40ff;
-    font-size: 19px;
+header ul li a select option {
+    background: #0e0019;
 }
 
-header .lang p {
-    background: white;
-    padding: 3px 4px;
-    color: #ab40ff;
-    border-radius: 11px;
+header .contect a {
+    padding: 10px;
+    background: #8200e9;
+    color: #fff;
+    border-radius: 21px;
+}
+
+header .bar {
+    display: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+@media (max-width:1100px) {
+    header nav {
+        width: 78%;
+    }
+}
+
+@media (max-width:956px) {
+    header nav {
+        width: 85%;
+    }
+}
+
+@media (max-width:884px) {
+    header nav {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        inset: 0;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--primary-color);
+        transition: .3s;
+        transform: translate(1000px, 0);
+    }
+
+    header nav.active {
+        transform: translate(0px, 0px);
+        transition: .3s;
+    }
+
+    header nav.active .close {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        height: 72%;
+        justify-content: space-evenly;
+    }
+
+    header .bar {
+        display: block;
+    }
 }
