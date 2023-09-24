@@ -18,6 +18,10 @@
     --primary-color-80: #CDC7D1;
 }
 
+body {
+    background-color: var(--primary-color-10);
+}
+
 header {
     width: 100%;
     display: flex;
@@ -28,6 +32,7 @@ header {
     background-color: var(--primary-color-10);
     color: #fff;
     box-shadow: -2px -1px 20px #000000a6;
+    z-index: 10000;
 }
 
 header .logo {
@@ -59,9 +64,11 @@ header ul {
     display: flex;
     align-items: center;
 }
-header ul li{
+
+header ul li {
     padding: 5px 10px;
 }
+
 header ul li a {
     color: #fff;
     transition: 0.3s;
@@ -84,7 +91,8 @@ header ul li a select {
 header ul li a select option {
     background: #0e0019;
 }
-header ul li a select option:hover{
+
+header ul li a select option:hover {
     color: var(--primary-color-60);
 }
 
@@ -145,3 +153,58 @@ header .bar {
         display: block;
     }
 }
+
+/* end header */
+/* start landing section */
+.landing {
+    width: 100%;
+    position: relative;
+}
+
+.landing .first {
+    width: 100%;
+    height: 419px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing .first img {
+    position: relative;
+    width: 24%;
+}
+
+.landing .second {
+    width: 100%;
+    height: 30vh;
+    background: url(../img/el.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.landing .second p {
+    font-size: 25px;
+    word-spacing: 1px;
+    margin: 16px 0;
+}
+
+.landing .second .button {
+    width: 32%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing .second .button a {
+    margin: 0 8px;
+    padding: 10px;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 21px;
+}
+
+/* start landing section */
