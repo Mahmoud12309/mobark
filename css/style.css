@@ -35,7 +35,7 @@ header {
     z-index: 10000;
 }
 
-header .logo {
+.logo {
     font-size: 28px;
     background: -webkit-linear-gradient(315deg, #d1d1d1 25%, #6d31bb);
     -webkit-background-clip: text;
@@ -187,9 +187,10 @@ header .bar {
 }
 
 .landing .second p {
+    text-align: center;
     font-size: 25px;
     word-spacing: 1px;
-    margin: 16px 0;
+    margin: 32px 0 17px 0px;
 }
 
 .landing .second .button {
@@ -200,11 +201,95 @@ header .bar {
 }
 
 .landing .second .button a {
+    position: relative;
     margin: 0 8px;
     padding: 10px;
     background: var(--primary-color);
     color: #fff;
     border-radius: 21px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.landing .second .button a:last-child {
+    background-color: #bb66ff;
+}
+
+.landing .second .button a:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width:1240px) {
+    .landing .second p {
+        font-size: 21px;
+    }
+}
+
+@media (max-width:929px) {
+    .landing .second p {
+        font-size: 19px;
+    }
+}
+
+@media (max-width:884px) {
+    .landing .first img {
+        width: 45%;
+    }
+}
+
+@media (max-width:745px) {
+    .landing .second p {
+        font-size: 20px;
+        width: 64%;
+    }
+
+    .landing .second .button {
+        justify-content: space-evenly;
+    }
+
+    .landing .second .button a {
+        margin: 0;
+    }
+}
+
+@media (max-width:685px) {
+    .landing .second p {
+        width: 80%;
+    }
+
+    .landing .second .button {
+        width: 35%;
+    }
+}
+
+@media (max-width:650px) {
+    .landing .first img {
+        width: 70%;
+    }
+
+    .landing .second {
+        height: auto;
+        background-position: center;
+        flex-direction: column;
+    }
+
+    .landing .second p {
+        text-align: center;
+    }
+
+    .landing .second .button {
+        flex-direction: column;
+    }
+
+    .landing .second .button a {
+        width: 186px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .landing .second .button a:last-child {
+        margin: 5px 0;
+    }
 }
 
 /* start landing section */
