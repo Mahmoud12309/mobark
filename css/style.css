@@ -25,13 +25,14 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 15px 40px;
-    background-color: #0e0019;
+    background-color: var(--primary-color-10);
     color: #fff;
+    box-shadow: -2px -1px 20px #000000a6;
 }
 
 header .logo {
     font-size: 28px;
-    background: -webkit-linear-gradient(315deg, #c337dd 25%, #8630f7);
+    background: -webkit-linear-gradient(315deg, #d1d1d1 25%, #6d31bb);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Aclonica', sans-serif;
@@ -58,9 +59,10 @@ header ul {
     display: flex;
     align-items: center;
 }
-
+header ul li{
+    padding: 5px 10px;
+}
 header ul li a {
-    padding: 10px;
     color: #fff;
     transition: 0.3s;
 }
@@ -76,15 +78,19 @@ header ul li a select {
     color: #fff;
     font-size: 16px;
     padding: 5px 0;
+    cursor: pointer;
 }
 
 header ul li a select option {
     background: #0e0019;
 }
+header ul li a select option:hover{
+    color: var(--primary-color-60);
+}
 
 header .contect a {
     padding: 10px;
-    background: #8200e9;
+    background: var(--primary-color);
     color: #fff;
     border-radius: 21px;
 }
