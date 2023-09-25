@@ -292,4 +292,84 @@ header .bar {
     }
 }
 
-/* start landing section */
+/* end landing section */
+
+/* start services section */
+.services-some {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 0;
+    background: #13051f;
+    min-height: 30vh;
+}
+
+.services-some .sk {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    background-color: #13051f;
+}
+
+.services-some .sk .skil {
+    width: 230px;
+    background: #1b0030;
+    display: flex;
+    align-items: center;
+    margin: 3px 5px;
+    border-radius: 7px;
+    color: #fff;
+}
+
+.services-some .sk .skil .icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 100%;
+    background: #250043;
+    margin: 0 20px 0 0;
+    border-radius: 10px 0 0 10px;
+}
+
+.services-some .text {
+    color: #fff;
+    text-align: center;
+    width: 50%;
+    margin: 33px 0;
+}
+
+.services-some .text h3 {
+    font-weight: 300;
+    font-size: 27px;
+    margin: 5px 0;
+}
+
+.services-some .text p {
+    line-height: 1.8;
+    word-spacing: 1px;
+}
+
+@media (max-width:654px) {
+    .services-some .text {
+        width: 75%;
+    }
+}
+
+@media (max-width:499px) {
+    .services-some .sk .skil {
+        width: 100%;
+    }
+}
+
+@media (max-width:418px) {
+    .services-some .text {
+        width: 100%;
+    }
+}
+
+/* end services section */
