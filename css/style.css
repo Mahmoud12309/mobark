@@ -373,3 +373,209 @@ header .bar {
 }
 
 /* end services section */
+/* start our-services section */
+.our-services {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.our-services .heading {
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+    padding: 55px 0;
+}
+
+.our-services .container {
+    background: #3f175e36;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: 0px -2px 20px #6a34935e;
+}
+
+.our-services .container .left-work {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.our-services .container .left-work .top {
+    display: flex;
+    flex-direction: column;
+}
+
+.our-services .container .left-work .top h3 {
+    color: #fff;
+}
+
+.our-services .container .left-work .top .f {
+    color: #fff;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.our-services .container .left-work .top .cumpunys {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.our-services .container .left-work .top .cumpunys .cumpny {
+    width: 265px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    background: #290447;
+    padding: 6px;
+    color: #fff;
+}
+
+.our-services .container .left-work .top .cumpunys .cumpny img {
+    width: 24%;
+}
+
+.our-services .container .left-work .top .cumpunys .cumpny p {
+    margin: 0 5px;
+}
+
+.our-services .container .left-work .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.our-services .container .left-work .bottom p {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    margin: 24px 0;
+}
+
+.our-services .container .left-work .bottom .work-gallery {
+    display: flex;
+    align-items: center;
+    background: #1f122a75;
+    color: #fff;
+    border-radius: 14px;
+}
+
+.our-services .container .left-work .bottom .work-gallery .works {
+    position: relative;
+    padding: 7px;
+}
+
+.our-services .container .left-work .bottom .work-gallery .works img {
+    width: 115px;
+    margin: 0 5px;
+    object-position: center;
+    border-radius: 9px;
+    object-fit: cover;
+}
+
+.our-services .container .left-work .bottom .work-gallery .see-more {
+    padding: 5px;
+}
+
+.our-services .container .left-work .bottom .work-gallery .see-more a {
+    color: #fff;
+}
+
+@media (max-width: 1312px) {
+    .our-services .container img {
+        width: 43%;
+    }
+}
+
+@media (max-width: 1248px) {
+    .our-services .container img {
+        width: 36%;
+    }
+}
+
+@media (max-width: 1121px) {
+    .our-services .container img {
+        width: 45%;
+    }
+
+    .our-services .container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 749px) {
+    .our-services .container img {
+        width: 50%;
+    }
+
+    .our-services .container {
+        padding: 20px;
+    }
+
+    .our-services .container .left-work {
+        width: 100%;
+    }
+
+    .our-services .container .left-work .bottom {
+        width: 100%;
+    }
+
+    .our-services .container .left-work .bottom .work-gallery {
+        width: 100%;
+    }
+}
+
+@media (max-width: 705px) {
+    .our-services .container .left-work .bottom .work-gallery {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 614px) {
+    .our-services .container .left-work .top .cumpunys {
+        grid-template-columns: 1fr;
+    }
+
+    .our-services .container .left-work .top {
+        width: 100%;
+    }
+
+    .our-services .container .left-work .top .cumpunys .cumpny {
+        width: 100%;
+    }
+
+    .our-services .container .left-work .top .cumpunys .cumpny img {
+        width: 13%;
+    }
+}
+
+@media (max-width: 485px) {
+    .our-services .container .left-work .bottom .work-gallery .works {
+        text-align: center;
+    }
+
+    .our-services .container .left-work .bottom .work-gallery .works img {
+        width: 130px;
+        margin: 2px 10px;
+    }
+}
+
+@media (max-width: 397px) {
+    .our-services .container .left-work .bottom .work-gallery .works img {
+        width: 100%;
+        margin: 5px;
+    }
+}
+
+/* start our-services section */
