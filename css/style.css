@@ -473,34 +473,52 @@ header .bar {
 }
 
 .our-services .container .left-work .bottom .work-gallery {
-    display: flex;
-    align-items: center;
+    position: relative;
+    width: 386px;
     background: #1f122a75;
     color: #fff;
+    overflow: hidden;
     border-radius: 14px;
 }
 
 .our-services .container .left-work .bottom .work-gallery .works {
-    width: 543px;
+    width: 100%;
     padding: 7px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    overflow: scroll;
+    transition: .3s;
 }
-.our-services .container .left-work .bottom .work-gallery .works::-webkit-scrollbar {
-    width: 0px;
+.our-services .container .left-work .bottom .work-gallery .arro-left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    background: var(--primary-color);
+    padding: 5px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
 }
 
-.our-services .container .left-work .bottom .work-gallery .works::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: transparent;
+.our-services .container .left-work .bottom .work-gallery .arro-right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    background: var(--primary-color);
+    padding: 5px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
 }
+
 .our-services .container .left-work .bottom .work-gallery .works img {
     width: 115px;
     margin: 0 5px;
     object-position: center;
     border-radius: 9px;
     object-fit: cover;
+    transition: .3s;
 }
 
 .our-services .container .left-work .bottom .work-gallery .see-more {
@@ -600,9 +618,9 @@ header .bar {
 
 
 @media (max-width: 749px) {
-.our-services .container .left-work .bottom .work-gallery .works{
-    width: 100%;
-}
+    .our-services .container .left-work .bottom .work-gallery .works {
+        width: 100%;
+    }
 }
 
 /* start our-services section */
