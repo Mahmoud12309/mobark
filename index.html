@@ -1,619 +1,170 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
-    text-decoration: none;
-    list-style: none;
-}
-
-:root {
-    --primary-color: #8200E9;
-    --primary-color-10: #0E001A;
-    --primary-color-15: #27212C;
-    --primary-color-20: #332F37;
-    --primary-color-25: #413749;
-    --primary-color-60: #A151E1;
-    --primary-color-70: #B4ADB8;
-    --primary-color-80: #CDC7D1;
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: var(--primary-color-60);
-}
-
-body {
-    background-color: var(--primary-color-10);
-}
-
-header {
-    width: 100%;
-    display: flex;
-    position: fixed;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 40px;
-    background-color: var(--primary-color-10);
-    color: #fff;
-    box-shadow: -2px -1px 20px #000000a6;
-    z-index: 10000;
-}
-
-.logo {
-    font-size: 28px;
-    background: -webkit-linear-gradient(315deg, #d1d1d1 25%, #6d31bb);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: 'Aclonica', sans-serif;
-}
-
-header nav {
-    display: flex;
-    align-items: center;
-    width: 67%;
-    padding: 4px 0;
-    justify-content: space-between;
-}
-
-header nav .close {
-    font-size: 30px;
-    color: #fff;
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    display: none;
-}
-
-header ul {
-    display: flex;
-    align-items: center;
-}
-
-header ul li {
-    padding: 5px 10px;
-}
-
-header ul li a {
-    color: #fff;
-    transition: 0.3s;
-}
-
-header ul li a:hover {
-    color: #ab40ff;
-}
-
-header ul li a select {
-    background: transparent;
-    border: 0;
-    outline: none;
-    color: #fff;
-    font-size: 16px;
-    padding: 5px 0;
-    cursor: pointer;
-}
-
-header ul li a select option {
-    background: #0e0019;
-}
-
-header ul li a select option:hover {
-    color: var(--primary-color-60);
-}
-
-header .contect a {
-    padding: 10px;
-    background: var(--primary-color);
-    color: #fff;
-    border-radius: 21px;
-}
-
-header .bar {
-    display: none;
-    color: #fff;
-    font-size: 18px;
-}
-
-@media (max-width:1100px) {
-    header nav {
-        width: 78%;
-    }
-}
-
-@media (max-width:956px) {
-    header nav {
-        width: 85%;
-    }
-}
-
-@media (max-width:884px) {
-    header nav {
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        inset: 0;
-        flex-direction: column;
-        justify-content: center;
-        background-color: var(--primary-color);
-        transition: .3s;
-        transform: translate(1000px, 0);
-    }
-
-    header nav.active {
-        transform: translate(0px, 0px);
-        transition: .3s;
-    }
-
-    header nav.active .close {
-        display: block;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        height: 72%;
-        justify-content: space-evenly;
-    }
-
-    header .bar {
-        display: block;
-    }
-}
-
-/* end header */
-/* start landing section */
-.landing {
-    width: 100%;
-    position: relative;
-}
-
-.landing .first {
-    width: 100%;
-    height: 419px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.landing .first img {
-    position: relative;
-    width: 24%;
-}
-
-.landing .second {
-    width: 100%;
-    height: 30vh;
-    background: url(../img/el.png);
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: #fff;
-}
-
-.landing .second p {
-    text-align: center;
-    font-size: 25px;
-    word-spacing: 1px;
-    margin: 32px 0 17px 0px;
-}
-
-.landing .second .button {
-    width: 32%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.landing .second .button a {
-    position: relative;
-    margin: 0 8px;
-    padding: 10px;
-    background: var(--primary-color);
-    color: #fff;
-    border-radius: 21px;
-    overflow: hidden;
-    transition: .3s;
-}
-
-.landing .second .button a:last-child {
-    background-color: #bb66ff;
-}
-
-.landing .second .button a:hover {
-    transform: scale(1.1);
-}
-
-@media (max-width:1240px) {
-    .landing .second p {
-        font-size: 21px;
-    }
-}
-
-@media (max-width:929px) {
-    .landing .second p {
-        font-size: 19px;
-    }
-}
-
-@media (max-width:884px) {
-    .landing .first img {
-        width: 45%;
-    }
-}
-
-@media (max-width:745px) {
-    .landing .second p {
-        font-size: 20px;
-        width: 64%;
-    }
-
-    .landing .second .button {
-        justify-content: space-evenly;
-    }
-
-    .landing .second .button a {
-        margin: 0;
-    }
-}
-
-@media (max-width:685px) {
-    .landing .second p {
-        width: 80%;
-    }
-
-    .landing .second .button {
-        width: 35%;
-        padding: 25px;
-    }
-}
-
-@media (max-width:650px) {
-    .landing .first img {
-        width: 70%;
-    }
-
-    .landing .second {
-        height: auto;
-        background-position: center;
-        flex-direction: column;
-    }
-
-    .landing .second p {
-        text-align: center;
-    }
-
-    .landing .second .button {
-        flex-direction: column;
-    }
-
-    .landing .second .button a {
-        width: 186px;
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .landing .second .button a:last-child {
-        margin: 5px 0;
-    }
-}
-
-/* end landing section */
-
-/* start services section */
-.services-some {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px 0;
-    background: #13051f;
-    min-height: 30vh;
-}
-
-.services-some .sk {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin: 0 10px;
-    background-color: #13051f;
-}
-
-.services-some .sk .skil {
-    width: 265px;
-    height: 70px;
-    margin: 3px 5px;
-    background: #1b0030;
-    border-radius: 7px;
-    display: flex;
-    align-items: center;
-    border-radius: 16px;
-    padding: 6px;
-    color: #fff;
-}
-
-.services-some .sk .skil .icon {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 100%;
-    background: #250043;
-    margin: 0 20px 0 0;
-    border-radius: 10px 0 0 10px;
-}
-
-.services-some .text {
-    color: #fff;
-    text-align: center;
-    width: 50%;
-    margin: 33px 0;
-}
-
-.services-some .text h3 {
-    font-weight: 300;
-    font-size: 27px;
-    margin: 5px 0;
-}
-
-.services-some .text p {
-    line-height: 1.8;
-    word-spacing: 1px;
-}
-
-@media (max-width:654px) {
-    .services-some .text {
-        width: 75%;
-    }
-}
-
-@media (max-width:545px) {
-    .services-some .sk .skil {
-        width: 100%;
-    }
-}
-
-@media (max-width:499px) {
-    .services-some .sk .skil {
-        width: 100%;
-    }
-}
-
-@media (max-width:418px) {
-    .services-some .text {
-        width: 100%;
-    }
-}
-
-/* end services section */
-/* start our-services section */
-.our-services {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.our-services .heading {
-    text-align: center;
-    color: #fff;
-    font-size: 30px;
-    font-weight: 400;
-    padding: 55px 0;
-}
-
-.our-services .container {
-    background: #3f175e36;
-    padding: 15px 40px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 90%;
-    justify-content: space-between;
-    border-radius: 15px;
-    box-shadow: 0px -2px 20px #6a34935e;
-}
-
-.our-services .container .left-work {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.our-services .container .left-work .top {
-    display: flex;
-    flex-direction: column;
-}
-
-.our-services .container .left-work .top h3 {
-    color: #fff;
-}
-
-.our-services .container .left-work .top .f {
-    color: #fff;
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.our-services .container .left-work .top .cumpunys {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr;
-}
-
-.our-services .container .left-work .top .cumpunys .cumpny {
-    width: 265px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    border-radius: 16px;
-    background: #290447;
-    padding: 6px;
-    color: #fff;
-}
-
-.our-services .container .left-work .top .cumpunys .cumpny img {
-    width: 24%;
-}
-
-.our-services .container .left-work .top .cumpunys .cumpny p {
-    margin: 0 5px;
-}
-
-.our-services .container .left-work .bottom {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.our-services .container .left-work .bottom p {
-    font-size: 20px;
-    color: #fff;
-    text-align: center;
-    margin: 24px 0;
-}
-
-.our-services .container .left-work .bottom .work-gallery {
-    position: relative;
-    width: 386px;
-    background: #1f122a75;
-    color: #fff;
-    overflow: hidden;
-    border-radius: 14px;
-}
-
-.our-services .container .left-work .bottom .work-gallery .works {
-    width: 100%;
-    padding: 7px;
-    display: inline-flex;
-    align-items: center;
-    transition: .3s;
-}
-
-.our-services .container .left-work .bottom .work-gallery .swiper-button-next,
-.our-services .container .left-work .bottom .work-gallery .swiper-button-prev {
-    color: var(--primary-color);
-    color: var(--primary-color);
-}
-
-.our-services .container .left-work .bottom .work-gallery .works img {
-    width: 115px;
-    object-position: center;
-    border-radius: 9px;
-    object-fit: cover;
-    transition: .3s;
-}
-
-@media (max-width: 1312px) {
-    .our-services .container img {
-        width: 43%;
-    }
-}
-
-@media (max-width: 1248px) {
-    .our-services .container img {
-        width: 36%;
-    }
-}
-
-@media (max-width: 1121px) {
-    .our-services .container img {
-        width: 45%;
-    }
-
-    .our-services .container {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 749px) {
-    .our-services .container img {
-        width: 50%;
-    }
-
-    .our-services .container {
-        padding: 20px;
-    }
-
-    .our-services .container .left-work {
-        width: 100%;
-    }
-
-    .our-services .container .left-work .bottom {
-        width: 100%;
-    }
-
-    .our-services .container .left-work .bottom .work-gallery {
-        width: 100%;
-    }
-}
-
-@media (max-width: 705px) {
-    .our-services .container .left-work .bottom .work-gallery {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 614px) {
-    .our-services .container .left-work .top {
-        width: 100%;
-    }
-
-    .our-services .container .left-work .top .cumpunys .cumpny {
-        width: 240px;
-    }
-
-    .our-services .container .left-work .top .cumpunys .cumpny img {
-        width: 23%;
-    }
-}
-
-@media (max-width: 485px) {
-    .our-services .container .left-work .bottom .work-gallery .works {
-        text-align: center;
-    }
-
-    .our-services .container .left-work .bottom .work-gallery .works img {
-        width: 130px;
-        margin: 2px 10px;
-    }
-}
-
-@media (max-width: 397px) {
-    .our-services .container .left-work .bottom .work-gallery .works img {
-        width: 100%;
-        margin: 5px;
-    }
-}
-
-
-@media (max-width: 749px) {
-    .our-services .container .left-work .bottom .work-gallery .works {
-        width: 100%;
-    }
-}
-
-@media (max-width: 545px) {
-    .our-services .container .left-work .top .cumpunys {
-        grid-template-columns: 1fr;
-    }
-
-    .our-services .container .left-work .top .cumpunys .cumpny {
-        width: 100%;
-    }
-
-    .our-services .container .left-work .top .cumpunys .cumpny img {
-        width: 14%;
-    }
-}
-
-/* start our-services section */
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontAwosem -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fontAwosem -->
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Dancing+Script:wght@400;500;600;700&family=Kalam:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10.3.1/swiper-bundle.min.css"
+        integrity="sha256-eaQuJLhn/1LZ5NdmuW2Igsg/GOdEJAikHEsJoEPf/Ms=" crossorigin="anonymous">
+    <!-- Google Font -->
+    <!-- css file -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- css file -->
+    <title>mobark store</title>
+</head>
+
+<body>
+    <!-- start  header -->
+    <header>
+        <a href="index.html" class="logo">Launch</a>
+        <nav>
+            <a href="#" class="close"><i class="fa-regular fa-circle-xmark"></i></a>
+            <ul>
+                <li><a href="#">stores</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Marketing</a></li>
+                <li><a href="#">SEO</a></li>
+                <li><a href="#">Applications</a></li>
+                <li><a href="#">Websites</a></li>
+                <li><a href="#"><select name="" id="">
+                            <option selected>English</option>
+                            <option>Arabic</option>
+                        </select></a></li>
+            </ul>
+            <div class="contect">
+                <a href="https://wa.me/+966530908498/?text=السلام عليكم ">Contect us</a>
+            </div>
+        </nav>
+        <a href="#" class="bar"><i class="fa-solid fa-bars-staggered"></i></a>
+    </header>
+    <!-- end  header -->
+
+    <!-- start landing section -->
+    <div class="landing">
+        <div class="first">
+            <img src="img/rocket-launch-BoIbplxVc8.png" alt="">
+        </div>
+        <div class="second">
+            <p>Ready to <span class="logo">Launch</span> your design journey with us? Let's make magic happen!</p>
+            <div class="button">
+                <a href="https://wa.me/+966530908498/?text=السلام عليكم ">Contect us</a>
+                <a href="https://wa.me/+966530908498/?text=السلام عليكم ">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <!-- end landing section -->
+
+    <!-- start services section -->
+    <div class="services-some">
+        <div class="sk">
+            <div class="skil">
+                <div class="icon">
+                    <img src="img/fluent_code-16-filled.png" alt="">
+                </div>
+                <p>Development</p>
+            </div>
+            <div class="skil">
+                <div class="icon">
+                    <img src="img/nimbus_marketing.png" alt="">
+                </div>
+                <p>Marketing</p>
+            </div>
+            <div class="skil">
+                <div class="icon">
+                    <img src="img/icon-park-outline_graphic-stitching.png" alt="">
+                </div>
+                <p>Graphic Design</p>
+            </div>
+            <div class="skil">
+                <div class="icon">
+                    <img src="img/Vector.png" alt="">
+                </div>
+                <p>Web Design</p>
+            </div>
+        </div>
+        <div class="text">
+            <h3>Meet Us</h3>
+            <p>We're a team of experienced designers, developers, and marketers who can't wait to work with you!
+                Together, we'll create the perfect design to set your business apart.</p>
+        </div>
+    </div>
+    <!-- end services section -->
+
+    <!-- start our services section -->
+    <div class="our-services">
+        <h2 class="heading">Our services</h2>
+        <div class="container">
+            <img src="img/OBJECTS.png" alt="" srcset="">
+            <div class="left-work">
+                <div class="top">
+                    <h3>Online Stores</h3>
+                    <p class="f">Designing stores using all platforms</p>
+                    <div class="cumpunys">
+                        <div class="cumpny">
+                            <img src="img/Frame 4012.png" alt="" srcset="">
+                            <p>Salla</p>
+                        </div>
+                        <div class="cumpny">
+                            <img src="img/Frame 4013.png" alt="" srcset="">
+                            <p>Shopify</p>
+                        </div>
+                        <div class="cumpny">
+                            <img src="img/Frame 4010.png" alt="" srcset="">
+                            <p>Zid</p>
+                        </div>
+                        <div class="cumpny">
+                            <img src="img/Frame 4011.png" alt="" srcset="">
+                            <p>Father Shops</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <p>Our Gallery</p>
+                    <div class="work-gallery swiper mySwiper">
+                        <!-- <i class="fa-solid arro-left fa-arrow-left-long"></i>
+                        <i class="fa-solid arro-right fa-arrow-right-long"></i> -->
+                        <div class="works swiper-wrapper">
+                            <img class="swiper-slide" src="img/1.jpeg" alt="" srcset="">
+                            <img class="swiper-slide" src="img/2.jpg" alt="" srcset="">
+                            <img class="swiper-slide" src="img/3.jpeg" alt="" srcset="">
+                            <img class="swiper-slide" src="img/4.jpeg" alt="" srcset="">
+                            <!-- _____________-->
+                            <img class="swiper-slide" src="img/5.jpeg" alt="" srcset="">
+                            <img class="swiper-slide" src="img/6.jpeg" alt="" srcset="">
+                            <img class="swiper-slide" src="img/7.jpg" alt="" srcset="">
+                            <img class="swiper-slide" src="img/8.jpeg" alt="" srcset="">
+                            <img class="swiper-slide" src="img/9.jpeg" alt="" srcset="">
+                            <img class="swiper-slide" src="img/10.jpg" alt="" srcset="">
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- start our services section -->
+    <!-- javascript file -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10.3.1/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- javascript file -->
+</body>
+
+</html>
