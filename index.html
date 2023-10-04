@@ -20,6 +20,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10.3.1/swiper-bundle.min.css"
+        integrity="sha256-eaQuJLhn/1LZ5NdmuW2Igsg/GOdEJAikHEsJoEPf/Ms=" crossorigin="anonymous">
     <!-- Google Font -->
     <!-- css file -->
     <link rel="stylesheet" href="css/style.css">
@@ -134,33 +136,33 @@
                 </div>
                 <div class="bottom">
                     <p>Our Gallery</p>
-                    <div class="work-gallery">
-                        <i class="fa-solid arro-left fa-arrow-left-long"></i>
-                        <i class="fa-solid arro-right fa-arrow-right-long"></i>
-                        <div class="works">
-                                <img src="img/1.jpeg" alt="" srcset="">
-                                <img src="img/2.jpg" alt="" srcset="">
-                                <img src="img/3.jpeg" alt="" srcset="">
-                                <img src="img/4.jpeg" alt="" srcset="">
-                                <!-- _____________-->
-                                <img src="img/5.jpeg" alt="" srcset="">
-                                <img src="img/6.jpg" alt="" srcset="">
-                                <img src="img/7.jpg" alt="" srcset="">
-                                <img src="img/8.jpeg" alt="" srcset="">
-                                <img src="img/9.jpeg" alt="" srcset="">
-                                <img src="img/10.jpeg" alt="" srcset="">
+                    <div class="work-gallery swiper mySwiper">
+                        <!-- <i class="fa-solid arro-left fa-arrow-left-long"></i>
+                        <i class="fa-solid arro-right fa-arrow-right-long"></i> -->
+                        <div class="works swiper-wrapper">
+                            <img class="swiper-slide" src="img/1.jpeg" alt="" srcset="">
+                            <img class="swiper-slide" src="img/2.jpg" alt="" srcset="">
+                            <img class="swiper-slide" src="img/3.jpeg" alt="" srcset="">
+                            <img class="swiper-slide" src="img/4.jpeg" alt="" srcset="">
+                            <!-- _____________-->
+                            <img class="swiper-slide" src="img/5.jpeg" alt="" srcset="">
+                            <img class="swiper-slide" src="img/6.jpeg" alt="" srcset="">
+                            <img class="swiper-slide" src="img/7.jpg" alt="" srcset="">
+                            <img class="swiper-slide" src="img/8.jpeg" alt="" srcset="">
+                            <img class="swiper-slide" src="img/9.jpeg" alt="" srcset="">
+                            <img class="swiper-slide" src="img/10.jpg" alt="" srcset="">
                         </div>
-                        <div class="see-more">
-                            <a href="#">See More</a>
-                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- start our services section -->
-
     <!-- javascript file -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10.3.1/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
     <!-- javascript file -->
 </body>
