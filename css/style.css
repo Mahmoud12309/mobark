@@ -488,46 +488,18 @@ header .bar {
     align-items: center;
     transition: .3s;
 }
-.our-services .container .left-work .bottom .work-gallery .arro-left {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translate(0, -50%);
-    background: var(--primary-color);
-    padding: 5px;
-    border-radius: 50%;
-    text-align: center;
-    cursor: pointer;
-}
-
-.our-services .container .left-work .bottom .work-gallery .arro-right {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translate(0, -50%);
-    background: var(--primary-color);
-    padding: 5px;
-    border-radius: 50%;
-    text-align: center;
-    cursor: pointer;
+.our-services .container .left-work .bottom .work-gallery .swiper-button-next,
+.our-services .container .left-work .bottom .work-gallery .swiper-button-prev {
+    color:var(--primary-color);
+    color:var(--primary-color);
 }
 
 .our-services .container .left-work .bottom .work-gallery .works img {
     width: 115px;
-    margin: 0 5px;
     object-position: center;
     border-radius: 9px;
     object-fit: cover;
     transition: .3s;
-}
-
-.our-services .container .left-work .bottom .work-gallery .see-more {
-    padding: 5px;
-    display: none;
-}
-
-.our-services .container .left-work .bottom .work-gallery .see-more a {
-    color: #fff;
 }
 
 @media (max-width: 1312px) {
