@@ -399,6 +399,7 @@ header .bar {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 100px;
 }
 
 .our-services .heading {
@@ -410,20 +411,19 @@ header .bar {
 }
 
 .our-services .container {
-    background: #3f175e36;
-    padding: 15px 40px;
+    width: 90%;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    width: 90%;
     justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px 40px;
+    background: #3f175e36;
     border-radius: 15px;
     box-shadow: 0px -2px 20px #6a34935e;
 }
 
 .our-services .container .left-work {
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
 }
@@ -616,4 +616,59 @@ header .bar {
     }
 }
 
-/* start our-services section */
+/* end our-services section */
+/* start Design section */
+.our-services .container .top-design {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.our-services .container .bottom-design {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+
+.our-services .container .bottom-design .skil-skil {
+    width: 265px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    background: #290447;
+    padding: 5px;
+    color: #fff;
+    margin: 10px;
+}
+
+.our-services .container .bottom-design .skil-skil .img {
+    margin: 0 20px 0 9px;
+}
+
+@media (max-width: 1312px) {
+    .our-services .container .bottom-design .skil-skil .img {
+        margin: 0 0px 0 12px;
+    }
+
+    .our-services .container .bottom-design .skil-skil .img img {
+        width: 75%;
+    }
+}
+
+@media (max-width: 840px) {
+    .our-services .container .top-design {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 677px) {
+    .our-services .container .bottom-design .skil-skil {
+        width: 100%;
+    }
+}
+
+/* start Design section */
