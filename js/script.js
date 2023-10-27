@@ -40,15 +40,12 @@ li.forEach(e => {
 
 
 
-// const bar = document.querySelector("header .bar");
-// bar.addEventListener("click", () => {
-//     nav.classList.add("active");
-// });
+const bar = document.querySelector("header .bar");
+const close = document.querySelector("header .x");
+bar.addEventListener("click", () => {
+    nav.classList.add("active");
+});
 
-// close.addEventListener("click", () => {
-//     nav.classList.remove("active");
-// });
-
-// bar.addEventListener("click", () => {
-//     nav.classList.toggle("active");
-// });
+close.addEventListener("click", () => {
+    nav.classList.remove("active");
+});
