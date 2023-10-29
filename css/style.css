@@ -11,6 +11,78 @@
     padding: 10px 30px;
 }
 
+.i {
+    width: 5px;
+    height: 60px;
+    background-color: #37a6f3;
+    display: block;
+    animation: opicty 1s linear infinite;
+}
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(3);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid red;
+}
 
 :root {
     --primary-color: #8200E9;
@@ -32,6 +104,7 @@
 }
 
 body {
+    overflow: hidden;
     background: linear-gradient(45deg, #03a9f4, #3f51b5, #2196f3, #3c20b8,
             #2196f3, #d941d9,
             #4821f3, #03a9f4,
@@ -166,7 +239,7 @@ header .container nav ul li a {
         transform: translate(500px, 0);
         justify-content: space-around;
         align-items: center;
-        width: 45%;
+        width: 65%;
         background: #2196f3;
         inset: 0;
         height: 100vh;
@@ -234,6 +307,8 @@ header .container nav ul li a {
 .landing .container .text h1 {
     color: #ffffffa3;
     font-size: 55px;
+    display: flex;
+    align-items: center;
 }
 
 .landing .container .text p {
@@ -334,6 +409,7 @@ header .container nav ul li a {
         width: 40%;
     }
 }
+
 @media (max-width: 390px) {
     .landing .container {
         padding: 10px;
@@ -366,5 +442,19 @@ header .container nav ul li a {
 
     100% {
         background-image: url(../img/bg3.jpg);
+    }
+}
+
+@keyframes opicty {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
