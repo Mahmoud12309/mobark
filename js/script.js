@@ -89,5 +89,5 @@ document.addEventListener('click', () => {
 
     setTimeout(() => {
         cursor.classList.remove("expand");
-    }, 500)
-})
+    }, 500);
+});
