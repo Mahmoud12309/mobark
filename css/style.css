@@ -85,6 +85,7 @@
     animation: cursorAnim3 .5s forwards;
     border: 1px solid red;
 }
+
 .ball {
     position: absolute;
     width: 5px;
@@ -93,9 +94,11 @@
     border-radius: 50%;
     transition: .3s;
 }
-section{
+
+section {
     position: relative;
 }
+
 :root {
     --primary-color: #8200E9;
     --primary-color-10: #0E001A;
@@ -298,7 +301,7 @@ header .container nav ul li a {
     animation: bg 120s infinite linear;
 }
 
-.landing svg{
+.landing svg {
     position: absolute;
     bottom: 0;
 }
@@ -450,7 +453,9 @@ header .container nav ul li a {
     align-items: center;
     justify-content: center;
     width: 100%;
+    flex-wrap: wrap;
 }
+
 .services .container .col .card {
     width: 30%;
     height: 260px;
@@ -464,6 +469,7 @@ header .container nav ul li a {
     border-radius: 18px;
     /* box-shadow: 0px -1px 20px 4px #0074ffb0, 20px 7px 20px 5px #ffffff2b inset; */
 }
+
 .services .container .col .card .image-icon {
     width: 20%;
 }
@@ -481,6 +487,33 @@ header .container nav ul li a {
     line-height: 1.8;
     text-align: center;
     color: #fff;
+}
+
+@media (max-width: 1086px) {
+    .services .container .col .card {
+        width: 45%;
+        margin: 10px 5px;
+    }
+}
+
+@media (max-width: 744px) {
+    .services .container .col .card {
+        width: 60%;
+        margin: 10px 0;
+    }
+}
+@media (max-width: 573px) {
+    .services .container .col .card {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 360px) {
+    .services .container .col .card {
+        width: 100%;
+        margin: 10px 0;
+    }
 }
 
 @keyframes color {
